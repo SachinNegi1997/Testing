@@ -1,0 +1,13 @@
+1. git init 
+2. git add . (add all file whole project) / git add "file name " (for single file)
+   ( now staged / and  Tracked)
+
+3. git commit -m " add file "
+   ( now commited tacked and unmodified)
+
+4.git remote add origin https://github.com/SachinNegi1997/learnin
+add username : SachinNegi
+add token    : create token (classic) with repo permission
+
+5. git push -u origin main
+
