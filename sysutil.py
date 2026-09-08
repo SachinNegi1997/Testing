@@ -13,8 +13,9 @@ def all_detail():
                 "usage" : usage
                 }
                
+  return system_info
 
 
-  print(system_info);
+  
 
 
