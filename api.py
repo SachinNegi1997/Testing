@@ -37,7 +37,7 @@ def bucketlist():
 
 # To execute fastapi use  fastapi dev
 
-file_name = "/home/sachin/myvenv/image.png"
+file_name = "/home/sachin/myvenv/image.png" # upload file in s3 bucket  using boto3 
 bucket ="s3balthi"
 object_name = "image.png"
 
