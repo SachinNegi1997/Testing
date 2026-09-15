@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from sysutil import all_detail
 import boto3
-
-s3= boto3.resource("s3") # s3 is using boto3 resources
+from botocore.exceptions  import ClientError
+#s3= boto3.resource("s3") # s3 is using boto3 resources
+s3= boto3.client("s3") # when to do upload file and download us client 
 # fastapi is file and FastAPI is class
 # pip install fastapi
 # pip install "fastapi [satandard]"
@@ -36,5 +37,9 @@ def bucketlist():
 
 # To execute fastapi use  fastapi dev
 
+file_name = "/home/sachin/myvenv/image.png"
+bucket ="s3balthi"
+object_name = "image.png"
 
+response = s3.upload_file(file_name,bucket,object_name)
 
