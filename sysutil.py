@@ -1,5 +1,20 @@
 import psutil
+import os
 
+
+
+
+def extra(fun):
+
+ def wrapper():
+   print (os.system('df -h'))
+   print (os.system('uptime'))
+   print (os.system('du -sh'))
+   print (os.system('free -h'))
+   fun()
+ return wrapper
+
+@extra
 def all_detail():
 
   cpu = psutil.cpu_percent(interval=1)
@@ -13,8 +28,8 @@ def all_detail():
                 "usage" : usage
                 }
                
-  return system_info
-
+  #return system_info
+all_detail()
 
   
 
